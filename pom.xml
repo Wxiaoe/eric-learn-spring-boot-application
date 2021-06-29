@@ -75,7 +75,7 @@
         7如果要用UndertowWebServer作为reactive web容器,必须注释掉web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <!--spring-boot-loader 用于源码分析-->
         <dependency>

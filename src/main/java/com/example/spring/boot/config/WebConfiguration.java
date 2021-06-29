@@ -2,6 +2,7 @@ package com.example.spring.boot.config;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,12 +29,12 @@ public class WebConfiguration {
      * @param context
      * @return
      */
-//    @Bean
-//    public ApplicationRunner runner(WebServerApplicationContext context) {
-//        return args -> {
-//            System.out.println("当前 webServer 实现类为：" + context.getWebServer().getClass().getName());
-//        };
-//    }
+    @Bean
+    public ApplicationRunner runner(WebServerApplicationContext context) {
+        return args -> {
+            System.out.println("当前 webServer 实现类为：" + context.getWebServer().getClass().getName());
+        };
+    }
 
     /**
      *  11.上面的runner不完善，ApplicationRunner @Bean 方法申明时，依赖注入WebServerApplicationContext，
