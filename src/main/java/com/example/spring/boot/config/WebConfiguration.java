@@ -2,18 +2,10 @@ package com.example.spring.boot.config;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.event.EventListener;
-import org.springframework.web.reactive.function.server.RouterFunction;
-import org.springframework.web.reactive.function.server.RouterFunctions;
-import org.springframework.web.reactive.function.server.ServerResponse;
-import reactor.core.publisher.Mono;
 
 //@Configuration
 //@SpringBootApplication
@@ -25,10 +17,10 @@ public class WebConfiguration {
      *  webflux 可以配合jetty tomcat undertow三种嵌入式Web容器使用
      * @return
      */
-    @Bean
-    public RouterFunction<ServerResponse> helloWorld() {
-        return RouterFunctions.route().GET("/hello-world", serverRequest -> ServerResponse.ok().body(Mono.just("hello,wold"),String.class)).build();
-    }
+//    @Bean
+//    public RouterFunction<ServerResponse> helloWorld() {
+//        return RouterFunctions.route().GET("/hello-world", serverRequest -> ServerResponse.ok().body(Mono.just("hello,wold"),String.class)).build();
+//    }
 
     /** 10.这里不完善，ApplicationRunner @Bean 方法申明时，依赖注入WebServerApplicationContext，
      * 同时兼顾servlet和reactive两种web场景
