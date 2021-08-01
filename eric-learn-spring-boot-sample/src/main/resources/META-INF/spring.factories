@@ -1,0 +1,7 @@
+#自动装配
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#WebAutoConfiguration
+
+# org.springframework.boot.autoconfigure.AutoConfigurationImportListener 配置
+org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
+com.example.spring.boot.module.auto.DefualtAutoConfigurationImportListener
