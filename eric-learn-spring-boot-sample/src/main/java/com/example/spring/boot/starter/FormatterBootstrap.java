@@ -1,6 +1,7 @@
 package com.example.spring.boot.starter;
 
 import com.example.spring.boot.autoconfigure.formatter.Formater;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -22,7 +23,7 @@ public class FormatterBootstrap {
         data.put("name", "酷酷");
         // 获取Formatter, 来自FormatterAutoConfiguration
         Formater formater = context.getBean(Formater.class);
-        System.out.printf("formater.format(data) : %s\n", formater.format(data));
+        System.out.printf("%s.format(data) : %s\n",formater.getClass().getSimpleName(), formater.format(data));
         // 关闭上下文
         context.close();
     }
