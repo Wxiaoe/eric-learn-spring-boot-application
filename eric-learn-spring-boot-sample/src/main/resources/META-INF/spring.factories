@@ -4,4 +4,4 @@
 
 # org.springframework.boot.autoconfigure.AutoConfigurationImportListener 配置
 org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
-com.example.spring.boot.module.auto.DefualtAutoConfigurationImportListener
+com.example.ericlearnspringbootsample.spring.boot.module.auto.DefualtAutoConfigurationImportListener

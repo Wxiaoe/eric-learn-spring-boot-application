@@ -29,6 +29,14 @@
             <artifactId>formatter-spring-boot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!-- Jackson 依赖  如果去掉使用默认依赖-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <!--如果parent引入了spring-boot会自动带入maven-war-plugin和spring-boot-plugin，则无需下面单独的maven-war-plugin和boot-maven-plugin的repackage-->
